@@ -3,7 +3,7 @@
 [ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/groundTile.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.0518, 27.0484 )
+extents = Vector2( 32.0518, 20.0187 )
 
 [resource]
 0/name = "upGroundTile"
