@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0005_5.png" type="Texture" id=2]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" type="Texture" id=3]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" type="Texture" id=4]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" type="Texture" id=5]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0001_8.png" type="Texture" id=6]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0000_9.png" type="Texture" id=7]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0008_3.png" type="Texture" id=8]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" type="Texture" id=9]
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0010_1.png" type="Texture" id=10]
+
+[node name="world" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 928.0
+margin_bottom = 793.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="."]
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="."]
+visible = false
+margin_top = -298.0
+margin_right = 928.0
+margin_bottom = 495.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, -26.8701 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0 )

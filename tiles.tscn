@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/groundTile.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.0518, 27.0484 )
+
+[node name="Tiles" type="Node2D"]
+
+[node name="upGroundTile" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="upGroundTile"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="upGroundTile/StaticBody2D"]
+position = Vector2( -0.0750961, 4.97479 )
+shape = SubResource( 1 )
+
+[node name="downGroundTile" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 64, 64 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="downGroundTile"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="downGroundTile/StaticBody2D"]
+position = Vector2( -0.0339966, -5.07891 )
+shape = SubResource( 1 )
