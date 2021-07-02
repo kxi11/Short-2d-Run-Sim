@@ -77,4 +77,4 @@ anims/run = SubResource( 4 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 100, 37, 50, 37 )
+region_rect = Rect2( 0, 37, 50, 37 )
