@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0005_5.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" type="Texture" id=9]
 [ext_resource path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0010_1.png" type="Texture" id=10]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Sword.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 304 )
@@ -130,6 +131,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sword" parent="." instance=ExtResource( 12 )]
+position = Vector2( -24, 368 )
+
 [node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 17.9336, 399.259 )
 
@@ -139,6 +143,7 @@ current = true
 zoom = Vector2( 0.2, 0.2 )
 process_mode = 0
 smoothing_enabled = true
+offset_h = 0.2
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, -26.8701 )
