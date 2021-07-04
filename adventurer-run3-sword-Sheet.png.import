@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-run3-05.png-6026da578f42a0eeb5c925bd509e19f7.stex"
+path="res://.import/adventurer-run3-sword-Sheet.png-c71328d5a4079470bd0fc66646798d2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://adventurer-run/adventurer-run3-05.png"
-dest_files=[ "res://.import/adventurer-run3-05.png-6026da578f42a0eeb5c925bd509e19f7.stex" ]
+source_file="res://adventurer-run3-sword-Sheet.png"
+dest_files=[ "res://.import/adventurer-run3-sword-Sheet.png-c71328d5a4079470bd0fc66646798d2b.stex" ]
 
 [params]
 

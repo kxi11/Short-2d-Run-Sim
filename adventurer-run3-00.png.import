@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-run3-04.png-2b1c803c9ca118c0e095b2fc9f0d8598.stex"
+path="res://.import/adventurer-run3-00.png-9d03250b5162ee5ae06d176a61cc09f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://adventurer-run/adventurer-run3-04.png"
-dest_files=[ "res://.import/adventurer-run3-04.png-2b1c803c9ca118c0e095b2fc9f0d8598.stex" ]
+source_file="res://adventurer-run3-00.png"
+dest_files=[ "res://.import/adventurer-run3-00.png-9d03250b5162ee5ae06d176a61cc09f7.stex" ]
 
 [params]
 

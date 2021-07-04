@@ -172,9 +172,9 @@ shape = SubResource( 2 )
 "player",
 ]]
 frames = SubResource( 16 )
-animation = "jump"
+animation = "die"
 frame = 1
-speed_scale = 2.0
+speed_scale = 1.5
 playing = true
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
