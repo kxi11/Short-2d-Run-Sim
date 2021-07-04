@@ -1,29 +1,124 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://adventurer-run/sword-animation-sheet.png" type="Texture" id=1]
 [ext_resource path="res://Sword.gd" type="Script" id=2]
 [ext_resource path="res://adventurer-run/glow.png" type="Texture" id=3]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 50, 111 )
+region = Rect2( 0, 0, 50, 52 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 50, 0, 50, 111 )
+region = Rect2( 50, 0, 50, 52 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 100, 0, 50, 111 )
+region = Rect2( 100, 0, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 52, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 50, 52, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 100, 52, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 208, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 50, 208, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 100, 208, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 150, 208, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 156, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 50, 156, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 100, 156, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 150, 156, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 104, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 50, 104, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 100, 104, 50, 52 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 150, 104, 50, 52 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "attack1",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "attack4",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "attack3",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "attack2",
 "speed": 5.0
 } ]
 
@@ -31,14 +126,23 @@ animations = [ {
 extents = Vector2( 10, 21.0585 )
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 42.1578
+radius = 51.7913
 
 [node name="Sword" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 0.353966, 0.713638 )
+scale = Vector2( 0.938648, 0.938648 )
+texture = ExtResource( 3 )
+energy = 0.96
+shadow_enabled = true
+shadow_color = Color( 0.105882, 0.0352941, 0.25098, 0 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -54,14 +158,7 @@ scale = Vector2( 0.955456, 1.93558 )
 position = Vector2( -0.493941, -0.121912 )
 shape = SubResource( 6 )
 
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 0.353966, 0.713638 )
-scale = Vector2( 0.938648, 0.938648 )
-enabled = false
-texture = ExtResource( 3 )
-energy = 0.96
-shadow_enabled = true
-shadow_color = Color( 0.105882, 0.0352941, 0.25098, 0 )
+[node name="AttackReset" type="Timer" parent="."]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

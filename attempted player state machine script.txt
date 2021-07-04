@@ -1,0 +1,92 @@
+extends KinematicBody2D
+#Constants
+const MOVE_SPEED = 170 #pixels per second
+const JUMP_FORCE = 700 #pixels per second
+const GRAVITY = 40 #pixels per second
+const MAX_FALL_SPEED = 1000 #pixels per second
+
+#State Dictionary Declaration
+enum states{
+	IDLE,
+	RUN,
+	JUMP,
+	ATTACK,
+	DIE,
+}
+
+#importing node references
+var state = states.IDLE
+onready var sprite = $Sprite
+#Define variables
+var yVelocity = 0
+var facingRight = true
+var moveDirection = 0
+var grounded = is_on_floor()
+
+func _physics_process(_delta): #Handles all the physics of the character movement
+	match state:
+		states.IDLE:
+			idle()
+		states.RUN:
+			run()
+		states.JUMP:
+			jump()
+		states.ATTACK:
+			attack()
+		states.DIE:
+			die()
+		
+	#Sprite Flipper
+	if facingRight and moveDirection < 0:
+		flip()
+	if !facingRight and moveDirection > 0:
+		flip()
+		
+func stateSwitch(state):
+	var oldState = self.state
+	emit_signal("state_before_changed",oldState)
+	emit_signal("state_after_changed",state)
+
+#	#Animation Handler
+#	if grounded:
+#		if moveDirection == 0:
+#			$Sprite.play("idle")
+#		else:
+#			$Sprite.play("run")
+#	else:
+#		$Sprite.play("jump")
+func idle():
+	if grounded:
+		if moveDirection == 0:
+			$Sprite.play("idle")
+		else:
+			stateSwitch(states.RUN)
+	else:
+		stateSwitch(states.JUMP)
+	
+func run():
+	$Sprite.play("run")
+	#Input controller (Horizontal)
+	if Input.is_action_pressed("ui_right"):
+		moveDirection += 1
+	if Input.is_action_pressed("ui_left"):
+		moveDirection -= 1
+	move_and_slide(Vector2(moveDirection * MOVE_SPEED,yVelocity),Vector2(0,-1))
+func jump():
+	$Sprite.play("jump")
+	#Input controller (Vertical)
+	yVelocity += GRAVITY
+	if grounded and Input.is_action_just_pressed("ui_up"):
+		yVelocity = -JUMP_FORCE
+	if grounded and yVelocity >= 5: #Resets the fall velocity if the character is touching the ground so that the velociity doesn't accumulate as they walk
+		yVelocity = 2
+	if yVelocity > MAX_FALL_SPEED: #Limits the vertical velocity to a maximum fall speed
+		yVelocity = MAX_FALL_SPEED
+func attack():
+	pass
+func die():
+	pass
+#Sprite Flipper Function
+func flip():
+	facingRight = !facingRight
+	sprite.flip_h = !sprite.flip_h
